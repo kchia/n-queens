@@ -15,21 +15,42 @@
 
 window.findNRooksSolution = function(n) {
   var board = new Board ({n:n});
-  var matrix = [];
-  for (var k = 0; k < n; k++){
-    matrix.push(board.get(k));
-  }
-  for (var i = 0; i < n; i++){
-    for (var j = 0; j < n; j++){
-      if (i === j) {
-        matrix[i][j] = 1;
-      } else {
-        matrix[i][j] = 0;
-      }
-    }
-  }
-  return matrix;
+  // var matrix = [];
 
+  // //board.togglePiece(0,0);
+
+  // // Iterate over the first row
+  // for(var i = 0; i < n; i++){
+
+  //   for(var j = 0; j < n; j++){
+  //   // Check if there are any row conflicts
+  //     if(!board.hasRowConflictAt(i) && !board.hasColConflictAt(j)){
+  //       // if no conflict, toggle first element and push to matrix
+  //       board.togglePiece(i,j);
+  //       // board should have [[1,0],[0,0]]
+  //   //matrix.push(board.rows(i));
+  //       // matrix looks like [[1,0]]
+  //     }
+  //   }
+  // // Move on to the next row
+  //   // Check if there's any row and column conflicts
+  //     // if there are conflicts, move to next element
+  //     // if no conflicts in next element, toggle it
+  //     // Push to matrix
+
+  // }
+  //   matrix.push(board.get(0));
+  //   matrix.push(board.get(1));
+  // console.log(matrix);
+  //   return matrix;
+  var inspector = function(node) {
+    //if node passes conflict tests, toggle the node
+      //recursive inspector function on child
+      //return the modified board
+  }
+
+  //initialize inspector on first row
+  //return result
 };
 
 
@@ -38,11 +59,7 @@ window.countNRooksSolutions = function(n) {
   var solutionCount = 0; //fixme
   var board = new Board({n:n});
 
-  var find = function(board, startRow) {
-    for (var i = 0; i < n; i++){
-      if ()
-    }
-  }
+
 
   console.log('Number of solutions for ' + n + ' rooks:', solutionCount);
   return solutionCount;
